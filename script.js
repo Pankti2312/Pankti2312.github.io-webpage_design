@@ -1,21 +1,13 @@
-// Carousel logic
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
+// Dark/Light theme toggle
+document.getElementById("theme-toggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  const icon = document.getElementById("theme-toggle");
+  icon.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+}); 
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle("active", i === index);
-  });
-}
-
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
-
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
-}
-
-setInterval(nextSlide, 5000); // Auto-slide every 5s
+// Form submission feedback
+document.getElementById("applyForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  document.getElementById("formMessage").textContent = "✅ Application submitted successfully!";
+  this.reset();
+});
