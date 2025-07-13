@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vault of Codes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <h1>Vault of Codes</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#internships">Internships</a>
+      <a href="#apply">Apply</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Learn. Build. Succeed.</h2>
+    <p>Explore exciting internships and build your career with Vault of Codes.</p>
+    <a href="#apply"><button>Apply Now</button></a>
+  </section>
+
+  <section id="internships" class="cards">
+    <h2>Available Internships</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Build interactive websites and web apps.</p>
+      </div>
+      <div class="card">
+        <h3>Python Programming</h3>
+        <p>Work on real-world Python projects and data tasks.</p>
+      </div>
+      <div class="card">
+        <h3>Java Development</h3>
+        <p>Develop object-oriented applications with Java.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="apply" class="form-section">
+    <h2>Apply Now</h2>
+    <form id="applyForm">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <select required>
+        <option value="">Select Internship</option>
+        <option value="web">Web Development</option>
+        <option value="python">Python Programming</option>
+        <option value="java">Java Development</option>
+      </select>
+      <textarea placeholder="Why do you want to join?" required></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <footer id="contact">
+    <p>© 2025 Vault of Codes. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
